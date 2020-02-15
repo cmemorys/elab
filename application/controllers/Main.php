@@ -11,7 +11,7 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		$this->auth_super();
-		$this->load->view('Auth/login', FALSE);
+		$this->load->view('auth/Login', FALSE);
 	}
 
 	function auth_login(){
@@ -71,10 +71,10 @@ class Main extends CI_Controller {
 		$this->M_Auth->try($account);
 	}
 	function pendaftaran(){
-		$this->load->view('Auth/pendaftaran', FALSE);
+		$this->load->view('auth/Pendaftaran', FALSE);
 	}
 	function pendaftaran_berhasil(){
-		$this->load->view('Auth/pendaftaran_berhasil', FALSE);
+		$this->load->view('auth/Pendaftaran_berhasil', FALSE);
 	}
 	function auth_register(){
 		$account = [

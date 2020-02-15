@@ -11,7 +11,7 @@ class Aslabloginform extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Auth/loginaslab', FALSE);
+		$this->load->view('auth/Loginaslab', FALSE);
 	}
 
 	function auth_login(){

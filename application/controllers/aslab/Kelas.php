@@ -25,18 +25,20 @@ class Kelas extends CI_Controller {
         foreach ($list as $field) {
             $no++;
             $row = array(); 
-			$namaMK = $this->detail($field->idMataKuliah,'mk');
-			$namaJurusan = $this->detail($field->idMataKuliah,'jr');
-            $namaAS = $this->detail($field->idAslab,'as');
-            $row[] = $no;
-            $row[] = $namaMK[0]['namaMKuliah'].' ('.$namaJurusan[0]['jurusan'].')';
-            $row[] = $field->semester;
-            $row[] = $field->tahun;
-            $row[] = $field->hurufKelas;
-            $row[] = $namaAS[0]['namaLengkap'];
-            $row[] = '
-            	<a class="btn btn-sm btn-danger m-1" href="javascript:void(0)" title="Hapus" onclick="deleteKelas('."'".$field->idKelas."'".')"><i class="fa fa-trash"></i></a>
-        			';
+            if($field->idAslab == $this->session->id) {
+    			$namaMK = $this->detail($field->idMataKuliah,'mk');
+    			$namaJurusan = $this->detail($field->idMataKuliah,'jr');
+                $namaAS = $this->detail($field->idAslab,'as');
+                $row[] = $no;
+                $row[] = $namaMK[0]['namaMKuliah'].' ('.$namaJurusan[0]['jurusan'].')';
+                $row[] = $field->semester;
+                $row[] = $field->tahun;
+                $row[] = $field->hurufKelas;
+                $row[] = $namaAS[0]['namaLengkap'];
+                $row[] = '
+                	<a class="btn btn-sm btn-danger m-1" href="javascript:void(0)" title="Hapus" onclick="deleteKelas('."'".$field->idKelas."'".')"><i class="fa fa-trash"></i></a>
+            			';
+            }
  
             $data[] = $row;
         }

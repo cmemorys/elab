@@ -1,3 +1,13 @@
+<?php
+    
+    if (isset($this->session->level)) {
+	
+	}
+	else {
+		redirect(base_url());
+	}
+
+?>
 <?php 
 
 $this->load->view('template/head');
@@ -16,9 +26,9 @@ $this->load->view('template/head');
 
 	</div>
 	<!-- jQuery 3 -->
-	<script src="<?php echo base_url(); ?>vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<!-- Bootstrap 3.3.7 -->
-	<script src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<?php 
     	if(isset($select2)){
       		echo '<script typr="text/javascript" src="'.base_url().'vendor/select2/dist/js/select2.full.min.js"></script>';

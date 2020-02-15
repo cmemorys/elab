@@ -7,7 +7,7 @@ class Main extends CI_Controller {
 	{
 		$data = [
 			'title' => 'Dashboard | ELABLTE',
-			'content' => 'aslab/main'
+			'content' => 'aslab/Main'
 		];
 		$this->load->view('template/template', $data, FALSE);
 	}
