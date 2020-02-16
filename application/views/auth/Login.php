@@ -49,7 +49,7 @@
       <div class="alert alert-danger alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <h4><i class="icon fa fa-ban"></i> Gagal!</h4>
-        Cek kembali npm/password anda, pastikan benar.
+        Cek kembali npm/password anda, pastikan benar. Pastikan akun anda sudah terverifikasi.
       </div>
       <?php } ?>
       <div class="form-group has-feedback">

@@ -42,7 +42,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <h4><?php echo $message; ?></h4>
+    <h1 align="center"><?php echo $errormsg; ?></h1>
     <a href="<?php echo base_url(); ?>">Klik untuk login</a>
   </div>
   <!-- /.login-box-body -->
